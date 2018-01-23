@@ -1,0 +1,19 @@
+<IfModule mod_rewrite.c>
+Options All -Indexes 
+RewriteEngine on
+RewriteRule ^login$ index.php
+RewriteRule ^logout$ logout.php
+RewriteRule ^cek-login$ cek_login.php
+RewriteRule ^profile$ media.php?module=profile
+
+RewriteRule ^home$ media.php?module=beranda
+RewriteRule ^data-absen$ media.php?module=absen
+RewriteRule ^data-mahasiswa$ media.php?module=mahasiswa
+RewriteRule ^users$ media.php?module=user
+
+RewriteRule ^add-user$ media.php?module=user&act=tambahuser
+RewriteRule ^edit-user-(.*)$ media.php?module=user&act=edituser&id=$1
+
+RewriteRule ^add-mahasiswa$ media.php?module=mahasiswa&act=tambah
+RewriteRule ^edit-mahasiswa-(.*)$ media.php?module=mahasiswa&act=edit&id=$1
+</IfModule>
